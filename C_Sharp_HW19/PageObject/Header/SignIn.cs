@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 
-namespace PracticeSelenium13012022.PageObject
+namespace C_Sharp_HW19.PageObject
 {
     public class SignIn : Header
     {

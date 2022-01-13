@@ -2,7 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace PracticeSelenium13012022
+namespace C_Sharp_HW19
 {
     public class BaseTest : IDisposable
     {
@@ -10,7 +10,7 @@ namespace PracticeSelenium13012022
 
         public void Dispose()
         {
-            //_driver.Quit();
+            _driver.Quit();
         }
 
         public IWebDriver StartDriverOnPage(string url)

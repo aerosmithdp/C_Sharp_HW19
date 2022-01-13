@@ -2,10 +2,10 @@ using System;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using Xunit;
-using PracticeSelenium13012022.PageObject;
+using C_Sharp_HW19.PageObject;
 
 
-namespace PracticeSelenium13012022
+namespace C_Sharp_HW19
 {
     public class UnitTest1 : BaseTest
     {

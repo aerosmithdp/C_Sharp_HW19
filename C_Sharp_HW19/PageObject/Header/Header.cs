@@ -3,7 +3,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 
-namespace PracticeSelenium13012022.PageObject
+namespace C_Sharp_HW19.PageObject
 {
     public class Header
     {

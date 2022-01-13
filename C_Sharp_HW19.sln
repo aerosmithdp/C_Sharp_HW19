@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31729.503
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PracticeSelenium13012022", "PracticeSelenium13012022\PracticeSelenium13012022.csproj", "{272DB9BA-D68F-4E8D-8A2A-78302AEB263B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "C_Sharp_HW19", "C_Sharp_HW19\C_Sharp_HW19.csproj", "{272DB9BA-D68F-4E8D-8A2A-78302AEB263B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
