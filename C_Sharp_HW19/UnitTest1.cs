@@ -82,7 +82,13 @@ namespace C_Sharp_HW19
         }
 
 
-
+        [Fact]
+        public void TestWomenHoverTshirts()
+        {
+            IWebDriver driver = StartDriverOnPage("http://automationpractice.com/index.php");
+            HomePage homePage = new(driver);
+            homePage.WomenHoverClickTshirts();
+        }
 
     }
 }
