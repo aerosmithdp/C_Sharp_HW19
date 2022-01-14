@@ -3,7 +3,7 @@ using System;
 
 namespace C_Sharp_HW19.PageObject
 {
-    public class ContactUs: Header
+    public class ContactUs : Header
     {
         public ContactUs(IWebDriver driver)
         {

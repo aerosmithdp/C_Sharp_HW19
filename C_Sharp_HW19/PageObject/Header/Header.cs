@@ -3,6 +3,8 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 
+//Created by Oleg Khizhnyi, Natali Nikulina, Viacheslav Sheremet
+
 namespace C_Sharp_HW19.PageObject
 {
     public class Header
@@ -16,14 +18,14 @@ namespace C_Sharp_HW19.PageObject
         private By _search = By.XPath("//input[@id='search_query_top']");
         private By _searchButton = By.XPath("//button[@name='submit_search']");
         private By _cart = By.XPath("//header[@id='header']/div[3]/div/div/div[3]/div/a/span[5]");
-        private By _womenHover = By.XPath("//div[@id='block_top_menu']/ul/li/a");
-        private By _womenHoverTop = By.XPath("//a[contains(text(),'Tops')]");
-        private By _womenHoverTshirts = By.XPath("//a[contains(.,'T-shirts')]");
-        private By _womenHoverBlouses = By.XPath("");
-        private By _womenHoverDresses = By.XPath("");
-        private By _womenHoverCasualDresses = By.XPath("");
-        private By _womenHoverEveningDresses = By.XPath("");
-        private By _womenHoverSummerDresses = By.XPath("");
+        private By _womenMenu = By.XPath("//div[@id='block_top_menu']/ul/li/a");
+        private By _womenMenuTop = By.XPath("//a[contains(text(),'Tops')]");
+        private By _womenMenuTshirts = By.XPath("//a[contains(.,'T-shirts')]");
+        private By _womenMenuBlouses = By.XPath("");
+        private By _womenMenuDresses = By.XPath("");
+        private By _womenMenuCasualDresses = By.XPath("");
+        private By _womenMenuEveningDresses = By.XPath("");
+        private By _womenMenuSummerDresses = By.XPath("");
 
 
 
@@ -69,29 +71,29 @@ namespace C_Sharp_HW19.PageObject
             return new Cart(_driver);
         }
 
-        public WomenHover ClickWomenHover()
+        public WomenMenu ClickWomenMenu()
         {
-            _driver.FindElement(_womenHover).Click();
-            return new WomenHover(_driver);
+            _driver.FindElement(_womenMenu).Click();
+            return new WomenMenu(_driver);
         }
 
-        public WomenHover WomenHoverClickTops()
+        public WomenMenu WomenMenuClickTops()
         {
             Actions actions = new(_driver);
-            IWebElement element = _driver.FindElement(_womenHover);
+            IWebElement element = _driver.FindElement(_womenMenu);
             actions.MoveToElement(element).Perform();
-            _driver.FindElement(_womenHoverTop).Click();
-            return new WomenHover(_driver);
+            _driver.FindElement(_womenMenuTop).Click();
+            return new WomenMenu(_driver);
 
         }
 
-        public WomenHover WomenHoverClickTshirts()
+        public WomenMenu WomenMenuClickTshirts()
         {
             Actions actions = new(_driver);
-            IWebElement element = _driver.FindElement(_womenHover);
+            IWebElement element = _driver.FindElement(_womenMenu);
             actions.MoveToElement(element).Perform();
-            _driver.FindElement(_womenHoverTshirts).Click();
-            return new WomenHover(_driver);
+            _driver.FindElement(_womenMenuTshirts).Click();
+            return new WomenMenu(_driver);
         }
 
 
