@@ -5,7 +5,7 @@ using OpenQA.Selenium.Interactions;
 
 //Created by Oleg Khizhnyi, Natali Nikulina, Viacheslav Sheremet
 
-namespace C_Sharp_HW19.PageObject.HeaderFolder
+namespace C_Sharp_HW19.PageObject
 {
     public class Header
     {

@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 
+
 namespace C_Sharp_HW19.PageObject
 {
-    public class Footer
+    public class Footer : Header
     {
-        protected IWebDriver _driver;
+      //  protected IWebDriver _driver;
 
         private By _FB = By.XPath("//a[contains(@href, 'https://www.facebook.com/groups/525066904174158/')]");
         private By _Twitter = By.XPath("//a[contains(@href, 'https://twitter.com/seleniumfrmwrk')]");
@@ -19,9 +20,19 @@ namespace C_Sharp_HW19.PageObject
         private By _sbmtbtn = By.XPath("//div[@id='newsletter_block_left']/div/form/div/button");
         private By _fieldemail = By.XPath("//div[@id='newsletter_block_left']/div/form/div/input");
         private By _externallink = By.XPath("//a[@href='http://www.prestashop.com']");
-        
+        private By _specialst = By.XPath("//section[@id='block_various_links_footer']/ul/li/a");
+        private By _newproduct = By.XPath("//a[contains(text(),'New products')]");
+        private By _bestsellers = By.XPath("//a[contains(text(),'Best sellers')]");
+        private By _ourStores = By.XPath("//a[contains(text(),'Our stores')]");
+        private By _contactUs = By.XPath("//section[@id='block_various_links_footer']/ul/li[5]/a");
+        private By _termsAndCondits = By.XPath("//a[contains(text(),'Terms and conditions of use')]");
+        private By _aboutUs = By.XPath("//a[contains(text(),'About us')]");
+        private By _sitemap = By.XPath("//a[contains(text(),'Sitemap')]");
 
-        public Footer ClickFB()
+
+
+
+        public FB ClickFB()
         {
             _driver.FindElement(_FB).Click();
             return new FB(_driver);
@@ -66,11 +77,33 @@ namespace C_Sharp_HW19.PageObject
             return this;
         }
 
-        public Footer ExternalLinkClick()
+        public ExternalLink ExternalLinkClick()
         {
             _driver.FindElement(_externallink).Click(); 
             return new ExternalLink(_driver);
         }
+
+         public Specials SpecialsFooterClick()
+         {
+             _driver.FindElement(_specialst).Click(); 
+             return new Specials(_driver);
+         }
+
+        public NewProduct NewProductClick()
+        {
+             _driver.FindElement(_newproduct).Click(); 
+             return new NewProduct(_driver);
+        }
+
+        public BestSellers BestSellersClick()
+        {
+            _driver.FindElement(_bestsellers).Click();
+            return new BestSellers(_driver);
+        }
+
+
+
+
 
 
 
