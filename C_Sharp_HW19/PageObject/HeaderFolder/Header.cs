@@ -5,11 +5,9 @@ using OpenQA.Selenium.Interactions;
 
 //Created by Oleg Khizhnyi, Natali Nikulina, Viacheslav Sheremet
 
-<<<<<<< HEAD
-namespace C_Sharp_HW19.PageObject
-=======
+
 namespace C_Sharp_HW19.PageObjects
->>>>>>> main
+
 {
     public class Header
     {

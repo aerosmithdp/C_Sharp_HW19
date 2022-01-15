@@ -9,7 +9,7 @@ using OpenQA.Selenium;
 
 
 
-namespace C_Sharp_HW19.PageObject
+namespace C_Sharp_HW19.PageObjects
 {
     public class Footer : Header
     {
@@ -87,7 +87,6 @@ namespace C_Sharp_HW19.PageObject
             _driver.FindElement(_externallink).Click(); 
             return new ExternalLink(_driver);
         }
-
 
         public WomenMenu WomenMenuFooterClick()
         {
