@@ -3,7 +3,8 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 
-//Created by Oleg Khizhnyi, Natali Nikulina, Viacheslav Sheremet
+//Created by Oleg Khizhnyi, Natali Nikulina, Viacheslav Sheremet at a lecture
+//Edited and supplemented by Oleg Khizhnyi
 
 namespace C_Sharp_HW19.PageObjects
 {
