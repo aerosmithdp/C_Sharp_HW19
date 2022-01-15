@@ -101,6 +101,36 @@ namespace C_Sharp_HW19.PageObject
             return new BestSellers(_driver);
         }
 
+        public OurStores OurStoresClick()
+        {
+            _driver.FindElement(_ourStores).Click();
+            return new OurStores(_driver);
+        }
+
+        public ContactUs ContactUsClick()
+        {
+            _driver.FindElement(_contactUs).Click();
+            return new ContactUs(_driver);
+        }
+
+        public TermsAndConditions TermsAndConditionsClick()
+        {
+            _driver.FindElement(_termsAndCondits).Click();
+            return new TermsAndConditions(_driver);
+        }
+
+        public AboutUs AboutUsClick()
+        {
+            _driver.FindElement(_aboutUs).Click();
+            return new AboutUs(_driver);
+        }
+
+        public SiteMap SiteMapClick()
+        {
+            _driver.FindElement(_sitemap).Click();
+            return new SiteMap(_driver);
+        }
+
 
 
 
