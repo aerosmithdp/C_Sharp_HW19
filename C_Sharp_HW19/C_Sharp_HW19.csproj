@@ -30,4 +30,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="PageObject\Body\" />
+    <Folder Include="PageObject\Footer\" />
+  </ItemGroup>
+
 </Project>
