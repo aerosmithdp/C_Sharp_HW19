@@ -28,7 +28,9 @@ namespace C_Sharp_HW19.PageObject
         private By _termsAndCondits = By.XPath("//a[contains(text(),'Terms and conditions of use')]");
         private By _aboutUs = By.XPath("//a[contains(text(),'About us')]");
         private By _sitemap = By.XPath("//a[contains(text(),'Sitemap')]");
-
+        private By _signInFooter = By.XPath("//footer[@id='footer']/div/section[5]/h4/a");
+        private By _womanMenu = By.XPath("//footer[@id='footer']/div/section[5]/h4/a");
+        
 
 
 
@@ -83,7 +85,13 @@ namespace C_Sharp_HW19.PageObject
             return new ExternalLink(_driver);
         }
 
-         public Specials SpecialsFooterClick()
+        public WomenMenu WomenMenuFooterClick()
+        {
+            _driver.FindElement(_womanMenu).Click();
+            return new WomenMenu(_driver);
+        }
+
+        public Specials SpecialsFooterClick()
          {
              _driver.FindElement(_specialst).Click(); 
              return new Specials(_driver);
@@ -129,6 +137,12 @@ namespace C_Sharp_HW19.PageObject
         {
             _driver.FindElement(_sitemap).Click();
             return new SiteMap(_driver);
+        }
+
+        public SignIn SignInClick()
+        {
+            _driver.FindElement(_signInFooter).Click();
+            return new SignIn(_driver);
         }
 
 
