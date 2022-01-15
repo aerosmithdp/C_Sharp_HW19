@@ -30,7 +30,10 @@
   <ItemGroup>
     <Folder Include="PageObject\Body\" />
     <Folder Include="PageObject\Footer\" />
-    <Folder Include="PageObject\Body\" />
+
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="PageObject\Body\BunnerStatic\" />
+  </ItemGroup>
 </Project>
