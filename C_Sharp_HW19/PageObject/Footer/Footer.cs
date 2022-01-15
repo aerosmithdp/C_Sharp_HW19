@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 
-namespace C_Sharp_HW19.PageObject
+namespace C_Sharp_HW19.PageObjects
 {
     public class Footer
     {
