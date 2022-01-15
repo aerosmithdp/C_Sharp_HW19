@@ -7,7 +7,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
 
-namespace C_Sharp_HW19.PageObjects
+namespace C_Sharp_HW19.PageObject
 {
     public class FB : Footer
     {
