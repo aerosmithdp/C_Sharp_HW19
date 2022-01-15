@@ -5,22 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using C_Sharp_HW19.PageObject.HeaderFolder;
 
-<<<<<<< HEAD
+
+
 
 namespace C_Sharp_HW19.PageObject
 {
     public class Footer : Header
     {
-      //  protected IWebDriver _driver;
-=======
-namespace C_Sharp_HW19.PageObjects
-{
-    public class Footer : Header
-    {
-        
->>>>>>> main
+       protected IWebDriver _driver;
+n
 
         private By _FB = By.XPath("//a[contains(@href, 'https://www.facebook.com/groups/525066904174158/')]");
         private By _Twitter = By.XPath("//a[contains(@href, 'https://twitter.com/seleniumfrmwrk')]");
@@ -162,13 +156,7 @@ namespace C_Sharp_HW19.PageObjects
 
 
 
-=======
-        public WomenMenu ClickWomenMenu()
-        {
-            _driver.FindElement(_womenMenu).Click();
-            return new WomenMenu(_driver);
-        }
->>>>>>> main
+
 
 
 
