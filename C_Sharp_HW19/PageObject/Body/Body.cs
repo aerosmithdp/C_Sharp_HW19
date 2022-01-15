@@ -2,9 +2,8 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
-using C_Sharp_HW19.PageObject;
 
-namespace C_Sharp_HW19.PageObject.Body
+namespace C_Sharp_HW19.PageObjects
 {
     public class Body
     {

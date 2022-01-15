@@ -1,8 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
-using C_Sharp_HW19.PageObject.HeaderFolder;
 
-namespace C_Sharp_HW19.PageObject
+namespace C_Sharp_HW19.PageObjects
 {
     public class HomePage : Header
     {

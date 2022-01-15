@@ -5,7 +5,7 @@ using OpenQA.Selenium.Interactions;
 
 //Created by Oleg Khizhnyi, Natali Nikulina, Viacheslav Sheremet
 
-namespace C_Sharp_HW19.PageObject.HeaderFolder
+namespace C_Sharp_HW19.PageObjects
 {
     public class Header
     {
@@ -77,13 +77,13 @@ namespace C_Sharp_HW19.PageObject.HeaderFolder
             return new WomenMenu(_driver);
         }
 
-        public WomenMenu WomenMenuClickTops()
+        public Tops WomenMenuClickTops()
         {
             Actions actions = new(_driver);
             IWebElement element = _driver.FindElement(_womenMenu);
             actions.MoveToElement(element).Perform();
             _driver.FindElement(_womenMenuTops).Click();
-            return new WomenMenu(_driver);
+            return new Tops(_driver);
 
         }
 
@@ -105,6 +105,14 @@ namespace C_Sharp_HW19.PageObject.HeaderFolder
             return new WomenMenu(_driver);
         }
 
+        public WomenMenu WomenMenuClickDresses()
+        {
+            Actions actions = new(_driver);
+            IWebElement element = _driver.FindElement(_womenMenu);
+            actions.MoveToElement(element).Perform();
+            _driver.FindElement(_womenMenuBlouses).Click();
+            return new WomenMenu(_driver);
+        }
 
 
     }
