@@ -25,6 +25,10 @@
     <Folder Include="PageObject\Body\" />
     <Folder Include="PageObject\Footer\" />
     <Folder Include="PageObject\Header\WomenMenu\" />
+    <Folder Include="PageObject\Body\BunnerStatic\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="PageObject\Body\BunnerStatic\" />
+  </ItemGroup>
 </Project>
