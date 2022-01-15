@@ -21,11 +21,11 @@ namespace C_Sharp_HW19.PageObject
         private By _womenMenu = By.XPath("//div[@id='block_top_menu']/ul/li/a");
         private By _womenMenuTop = By.XPath("//a[contains(text(),'Tops')]");
         private By _womenMenuTshirts = By.XPath("//a[contains(.,'T-shirts')]");
-        private By _womenMenuBlouses = By.XPath("");
-        private By _womenMenuDresses = By.XPath("");
-        private By _womenMenuCasualDresses = By.XPath("");
-        private By _womenMenuEveningDresses = By.XPath("");
-        private By _womenMenuSummerDresses = By.XPath("");
+        private By _womenMenuBlouses = By.CssSelector(".sfHover:nth-child(2) > a");
+        private By _womenMenuDresses = By.XPath("//a[contains(text(),'Dresses')]");
+        private By _womenMenuCasualDresses = By.XPath("//a[contains(text(),'Casual Dresses')]");
+        private By _womenMenuEveningDresses = By.XPath("//a[contains(text(),'Evening Dresses')]");
+        private By _womenMenuSummerDresses = By.XPath("//a[contains(text(),'Summer Dresses')]");
 
 
 
@@ -93,6 +93,15 @@ namespace C_Sharp_HW19.PageObject
             IWebElement element = _driver.FindElement(_womenMenu);
             actions.MoveToElement(element).Perform();
             _driver.FindElement(_womenMenuTshirts).Click();
+            return new WomenMenu(_driver);
+        }
+
+        public WomenMenu WomenMenuClickBlouses()
+        {
+            Actions actions = new(_driver);
+            IWebElement element = _driver.FindElement(_womenMenu);
+            actions.MoveToElement(element).Perform();
+            _driver.FindElement(_womenMenuBlouses).Click();
             return new WomenMenu(_driver);
         }
 
