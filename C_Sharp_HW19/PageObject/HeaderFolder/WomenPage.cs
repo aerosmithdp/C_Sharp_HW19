@@ -1,12 +1,11 @@
 ﻿using OpenQA.Selenium;
 using System;
 
-
 namespace C_Sharp_HW19.PageObjects
 {
-    public class WomenMenu : Header
+    public class WomenPage : Header
     {
-        public WomenMenu(IWebDriver driver)
+        public WomenPage(IWebDriver driver)
         {
             _driver = driver;
         }
