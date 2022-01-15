@@ -7,7 +7,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 using C_Sharp_HW19.PageObject.HeaderFolder;
 
-namespace C_Sharp_HW19.PageObject
+namespace C_Sharp_HW19.PageObjects
 {
     public class Footer : Header
     {
