@@ -65,30 +65,6 @@ namespace C_Sharp_HW19
             homePage.ClickSearchButton();
         }
 
-        //[Fact]
-        //public void TestWomenHover()
-        //{
-        //    IWebDriver driver = StartDriverOnPage("http://automationpractice.com/index.php");
-        //    HomePage homePage = new(driver);
-        //    homePage.ClickWomenHover();
-        //}
-
-        //[Fact]
-        //public void TestWomenHoverTops()
-        //{
-        //    IWebDriver driver = StartDriverOnPage("http://automationpractice.com/index.php");
-        //    HomePage homePage = new(driver);
-        //    homePage.WomenHoverClickTops();
-        //}
-
-
-        //[Fact]
-        //public void TestWomenHoverTshirts()
-        //{
-        //    IWebDriver driver = StartDriverOnPage("http://automationpractice.com/index.php");
-        //    HomePage homePage = new(driver);
-        //    homePage.WomenHoverClickTshirts();
-        //}
 
     }
 }
