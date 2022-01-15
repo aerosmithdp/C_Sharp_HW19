@@ -9,9 +9,9 @@ using OpenQA.Selenium.Chrome;
 
 namespace C_Sharp_HW19.PageObjects
 {
-    public class YouTube : Footer
+    public class BestSellers : Footer
     {
-        public YouTube(IWebDriver driver)
+        public BestSellers(IWebDriver driver)
         {
             _driver = driver;
         }

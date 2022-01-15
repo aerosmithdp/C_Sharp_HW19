@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-
 namespace C_Sharp_HW19.PageObjects
 {
-    public class YouTube : Footer
+    public class Specials : Footer
     {
-        public YouTube(IWebDriver driver)
+        public Specials(IWebDriver driver)
         {
             _driver = driver;
         }
