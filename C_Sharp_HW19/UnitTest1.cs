@@ -70,7 +70,7 @@ namespace C_Sharp_HW19
         {
             IWebDriver driver = StartDriverOnPage("http://automationpractice.com/index.php");
             HomePage homePage = new(driver);
-            homePage.ClickWomenHover();
+            homePage.ClickWomenMenu();
         }
 
         [Fact]
@@ -78,7 +78,7 @@ namespace C_Sharp_HW19
         {
             IWebDriver driver = StartDriverOnPage("http://automationpractice.com/index.php");
             HomePage homePage = new(driver);
-            homePage.WomenHoverClickTops();
+            homePage.WomenMenuClickTops();
         }
 
 
@@ -87,7 +87,7 @@ namespace C_Sharp_HW19
         {
             IWebDriver driver = StartDriverOnPage("http://automationpractice.com/index.php");
             HomePage homePage = new(driver);
-            homePage.WomenHoverClickTshirts();
+            homePage.WomenMenuClickTshirts();
         }
 
     }

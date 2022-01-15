@@ -5,7 +5,7 @@ using OpenQA.Selenium.Interactions;
 
 //Created by Oleg Khizhnyi, Natali Nikulina, Viacheslav Sheremet
 
-namespace C_Sharp_HW19.PageObject
+namespace C_Sharp_HW19.PageObject.HeaderFolder
 {
     public class Header
     {
@@ -19,7 +19,7 @@ namespace C_Sharp_HW19.PageObject
         private By _searchButton = By.XPath("//button[@name='submit_search']");
         private By _cart = By.XPath("//header[@id='header']/div[3]/div/div/div[3]/div/a/span[5]");
         private By _womenMenu = By.XPath("//div[@id='block_top_menu']/ul/li/a");
-        private By _womenMenuTop = By.XPath("//a[contains(text(),'Tops')]");
+        private By _womenMenuTops = By.XPath("//a[contains(text(),'Tops')]");
         private By _womenMenuTshirts = By.XPath("//a[contains(.,'T-shirts')]");
         private By _womenMenuBlouses = By.CssSelector(".sfHover:nth-child(2) > a");
         private By _womenMenuDresses = By.XPath("//a[contains(text(),'Dresses')]");
@@ -82,7 +82,7 @@ namespace C_Sharp_HW19.PageObject
             Actions actions = new(_driver);
             IWebElement element = _driver.FindElement(_womenMenu);
             actions.MoveToElement(element).Perform();
-            _driver.FindElement(_womenMenuTop).Click();
+            _driver.FindElement(_womenMenuTops).Click();
             return new WomenMenu(_driver);
 
         }
