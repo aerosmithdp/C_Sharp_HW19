@@ -11,6 +11,7 @@
     <EmbeddedResource Remove="PageObject\Header\WomenMenu\**" />
     <None Remove="PageObject\Header\WomenMenu\**" />
     <None Remove="PageObject\Body\BunnerSlider\" />
+    <None Remove="PageObject\Body\ProductList\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,7 +32,8 @@
   <ItemGroup>
     <Folder Include="PageObject\Body\" />
 
-    <Folder Include="PageObject\Body\BunnerSlider\" />
+    <Folder Include="PageObject\Body\Homeslider\" />
+    <Folder Include="PageObject\Body\ProductList\" />
   </ItemGroup>
 
   <ItemGroup>

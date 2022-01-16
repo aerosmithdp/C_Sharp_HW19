@@ -5,12 +5,11 @@ using OpenQA.Selenium.Interactions;
 
 namespace C_Sharp_HW19.PageObjects
 {
-    public class BunnerSlider3 : Body
+    public class ButtonMore : Body
     {
-        public BunnerSlider3(IWebDriver driver)
+        public ButtonMore(IWebDriver driver)
         {
             _driver = driver;
-
         }
     }
 }
