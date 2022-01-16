@@ -145,8 +145,6 @@ namespace C_Sharp_HW19.PageObjects
             return new SignIn(_driver);
         }
 
-
-
     }
 }
 
