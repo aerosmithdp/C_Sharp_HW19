@@ -169,11 +169,11 @@ namespace C_Sharp_HW19.PageObjects
             _driver.FindElement(_myAddresses).Click();
             return new MyAddresses(_driver);
         }
-
-        public PersonalInfo ClickPersonalInfoFooter()
+        
+        public MyPersonalInformation ClickPersonalInfoFooter()
         {
             _driver.FindElement(_myPersonalInfo).Click();
-            return new PersonalInfo(_driver);
+            return new MyPersonalInformation(_driver);
         }
     }
 }
