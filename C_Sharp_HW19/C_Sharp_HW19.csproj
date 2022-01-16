@@ -10,6 +10,7 @@
     <Compile Remove="PageObject\Header\WomenMenu\**" />
     <EmbeddedResource Remove="PageObject\Header\WomenMenu\**" />
     <None Remove="PageObject\Header\WomenMenu\**" />
+    <None Remove="PageObject\Body\BunnerSlider\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -31,6 +32,7 @@
     <Folder Include="PageObject\Body\" />
     <Folder Include="PageObject\Footer\" />
 
+    <Folder Include="PageObject\Body\BunnerSlider\" />
   </ItemGroup>
 
   <ItemGroup>
