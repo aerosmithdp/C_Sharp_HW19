@@ -7,31 +7,38 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
 
 
-
+// sheremet
 
 namespace C_Sharp_HW19.PageObjects
 {
     public class Footer : Header
     {
-        private By _FB = By.XPath("//a[contains(@href, 'https://www.facebook.com/groups/525066904174158/')]");
-        private By _Twitter = By.XPath("//a[contains(@href, 'https://twitter.com/seleniumfrmwrk')]");
-        private By _TouTube = By.XPath("//a[contains(@href, 'https://www.youtube.com/channel/UCHl59sI3SRjQ-qPcTrgt0tA')]");
-        private By _Google = By.XPath("//a[contains(@href, 'https://plus.google.com/111979135243110831526/posts')]");
-        private By _sbmtbtn = By.XPath("//div[@id='newsletter_block_left']/div/form/div/button");
-        private By _fieldemail = By.XPath("//div[@id='newsletter_block_left']/div/form/div/input");
-        private By _externallink = By.XPath("//a[@href='http://www.prestashop.com']");
-        private By _specialst = By.XPath("//section[@id='block_various_links_footer']/ul/li/a");
-        private By _newproduct = By.XPath("//a[contains(text(),'New products')]");
-        private By _bestsellers = By.XPath("//a[contains(text(),'Best sellers')]");
-        private By _ourStores = By.XPath("//a[contains(text(),'Our stores')]");
-        private By _contactUs = By.XPath("//section[@id='block_various_links_footer']/ul/li[5]/a");
-        private By _termsAndCondits = By.XPath("//a[contains(text(),'Terms and conditions of use')]");
-        private By _aboutUs = By.XPath("//a[contains(text(),'About us')]");
-        private By _sitemap = By.XPath("//a[contains(text(),'Sitemap')]");
-        private By _signInFooter = By.XPath("//footer[@id='footer']/div/section[5]/h4/a");
-        private By _womanMenu = By.XPath("//footer[@id='footer']/div/section[5]/h4/a");
-        
+        private readonly By _FB = By.XPath("//a[contains(@href, 'https://www.facebook.com/groups/525066904174158/')]");
+        private readonly By _Twitter = By.XPath("//a[contains(@href, 'https://twitter.com/seleniumfrmwrk')]");
+        private readonly By _TouTube = By.XPath("//a[contains(@href, 'https://www.youtube.com/channel/UCHl59sI3SRjQ-qPcTrgt0tA')]");
+        private readonly By _Google = By.XPath("//a[contains(@href, 'https://plus.google.com/111979135243110831526/posts')]");
 
+        private readonly By _sbmtbtn = By.XPath("//div[@id='newsletter_block_left']/div/form/div/button");
+        private readonly By _fieldemail = By.XPath("//div[@id='newsletter_block_left']/div/form/div/input");
+
+        private readonly By _externallink = By.XPath("//a[@href='http://www.prestashop.com']");
+        private readonly By _specialst = By.XPath("//section[@id='block_various_links_footer']/ul/li/a");
+
+        private readonly By _newproduct = By.XPath("//a[contains(text(),'New products')]");
+        private readonly By _bestsellers = By.XPath("//a[contains(text(),'Best sellers')]");
+        private readonly By _ourStores = By.XPath("//a[contains(text(),'Our stores')]");
+        private readonly By _contactUs = By.XPath("//section[@id='block_various_links_footer']/ul/li[5]/a");
+        private readonly By _termsAndCondits = By.XPath("//a[contains(text(),'Terms and conditions of use')]");
+        private readonly By _aboutUs = By.XPath("//a[contains(text(),'About us')]");
+        private readonly By _sitemap = By.XPath("//a[contains(text(),'Sitemap')]");
+        private readonly By _signInFooter = By.XPath("//footer[@id='footer']/div/section[5]/h4/a");
+
+        private readonly By _womanMenu = By.XPath("//footer[@id='footer']/div/section[5]/h4/a");
+
+        private readonly By _orderHistory = By.XPath("//a[contains(text(),'My orders')]");
+        private readonly By _credirSlips = By.XPath("//a[contains(text(),'My credit slips')]");
+        private readonly By _myAddresses = By.XPath("//a[contains(text(),'My addresses')]");
+        private readonly By _myPersonalInfo = By.XPath("//a[contains(text(),'My personal info')]");
 
 
         public FB ClickFB()
@@ -79,10 +86,10 @@ namespace C_Sharp_HW19.PageObjects
             return this;
         }
 
-        public ExternalLink ExternalLinkClick()
+        public PrestaShopPage ExternalLinkClick()
         {
             _driver.FindElement(_externallink).Click(); 
-            return new ExternalLink(_driver);
+            return new PrestaShopPage(_driver);
         }
 
         public WomenPage WomenMenuFooterClick()
@@ -145,6 +152,28 @@ namespace C_Sharp_HW19.PageObjects
             return new SignIn(_driver);
         }
 
+        public OrderHistory ClickOrderHistoryFooter()
+        {
+            _driver.FindElement(_orderHistory).Click();
+            return new OrderHistory(_driver);
+        }
+
+        public CreditSlips ClickCreditSlipsFooter()
+        {
+            _driver.FindElement(_credirSlips).Click();
+            return new CreditSlips(_driver);
+        }
+
+        public MyAddresses ClickMyAddressesFooter()
+        {
+            _driver.FindElement(_myAddresses).Click();
+            return new MyAddresses(_driver);
+        }
+
+        public PersonalInfo ClickPersonalInfoFooter()
+        {
+            _driver.FindElement(_myPersonalInfo).Click();
+            return new PersonalInfo(_driver);
+        }
     }
 }
-

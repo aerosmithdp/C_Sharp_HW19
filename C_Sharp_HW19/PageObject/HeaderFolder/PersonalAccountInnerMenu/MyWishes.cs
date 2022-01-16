@@ -1,14 +1,16 @@
 ﻿using OpenQA.Selenium;
 using System;
 
+
 namespace C_Sharp_HW19.PageObjects
+
 {
-    public class WomenPage : Header
+    public class MyWishes : Header
     {
-        public WomenPage(IWebDriver driver)
+        public MyWishes(IWebDriver driver)
         {
             _driver = driver;
         }
-    }
 
+    }
 }
