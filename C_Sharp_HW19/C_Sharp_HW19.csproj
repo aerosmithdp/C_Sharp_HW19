@@ -30,7 +30,6 @@
 
   <ItemGroup>
     <Folder Include="PageObject\Body\" />
-    <Folder Include="PageObject\Footer\" />
 
     <Folder Include="PageObject\Body\BunnerSlider\" />
   </ItemGroup>

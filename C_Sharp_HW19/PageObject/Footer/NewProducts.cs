@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-
 namespace C_Sharp_HW19.PageObjects
 {
-    public class ExternalLink : Footer
+    public class NewProduct : Footer
     {
-        public ExternalLink(IWebDriver driver)
+        public NewProduct(IWebDriver driver)
         {
             _driver = driver;
         }
