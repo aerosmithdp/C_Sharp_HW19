@@ -5,7 +5,7 @@ using OpenQA.Selenium.Interactions;
 
 namespace C_Sharp_HW19.PageObjects
 {
-    public class BannerSale:Body
+    public class BannerSale : Body
     {
         public BannerSale(IWebDriver driver)
         {

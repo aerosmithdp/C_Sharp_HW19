@@ -1,10 +1,15 @@
 ﻿using System;
-namespace C_Sharp_HW19.PageObject.Body
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace C_Sharp_HW19.PageObjects
 {
-    public class TwitterQuickView
+    public class TwitterQuickView : Body
     {
-        public TwitterQuickView()
+        public TwitterQuickView(IWebDriver driver)
         {
+            _driver = driver;
         }
     }
 }

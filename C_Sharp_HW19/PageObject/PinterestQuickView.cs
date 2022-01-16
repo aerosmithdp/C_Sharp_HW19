@@ -1,10 +1,15 @@
 ﻿using System;
-namespace C_Sharp_HW19.PageObject
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace C_Sharp_HW19.PageObjects
 {
-    public class PinterestQuickView
+    public class PinterestQuickView : Body
     {
-        public PinterestQuickView()
+        public PinterestQuickView(IWebDriver driver)
         {
+            _driver = driver;
         }
     }
 }

@@ -5,7 +5,7 @@ using OpenQA.Selenium.Interactions;
 
 namespace C_Sharp_HW19.PageObjects
 {
-    public class BannerSavvyTrends:Body
+    public class BannerSavvyTrends : Body
     {
         public BannerSavvyTrends(IWebDriver driver)
         {

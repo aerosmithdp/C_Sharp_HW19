@@ -1,10 +1,15 @@
 ﻿using System;
-namespace C_Sharp_HW19.PageObject.Body
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
+
+namespace C_Sharp_HW19.PageObjects
 {
-    public class GoogleQuickView
+    public class GoogleQuickView : Body
     {
-        public GoogleQuickView()
+        public GoogleQuickView(IWebDriver driver)
         {
+            _driver = driver;
         }
     }
 }
