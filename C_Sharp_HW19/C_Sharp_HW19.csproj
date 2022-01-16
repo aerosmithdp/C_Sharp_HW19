@@ -12,12 +12,7 @@
     <None Remove="PageObject\Header\WomenMenu\**" />
     <None Remove="PageObject\Body\BunnerSlider\" />
     <None Remove="PageObject\Body\ProductList\" />
-    <Compile Remove="PageObject\HeaderFolder\PersonalAccountInnerMenu\CreditSlips.cs" />
-    <Compile Remove="PageObject\HeaderFolder\PersonalAccountInnerMenu\ImproveAddresses.cs" />
-    <Compile Remove="PageObject\HeaderFolder\PersonalAccountInnerMenu\MyAddresses.cs" />
-    <Compile Remove="PageObject\HeaderFolder\PersonalAccountInnerMenu\MyPersonalInformation.cs" />
-    <Compile Remove="PageObject\HeaderFolder\PersonalAccountInnerMenu\MyWishes.cs" />
-    <Compile Remove="PageObject\HeaderFolder\PersonalAccountInnerMenu\OrdersHistory.cs" />
+    <None Remove="PageObject\HeaderFolder\PersonalAccountInnerMenu\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,6 +35,7 @@
 
     <Folder Include="PageObject\Body\Homeslider\" />
     <Folder Include="PageObject\Body\ProductList\" />
+    <Folder Include="PageObject\HeaderFolder\PersonalAccountInnerMenu\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -8,9 +8,9 @@ using OpenQA.Selenium.Support.UI;
 
 namespace C_Sharp_HW19.PageObjects
 {
-    public class Body : Footer
+    public class Body 
     {
-        //protected IWebDriver _driver;
+        protected IWebDriver _driver;
         //баннеры в body
         private By _bannerSale = By.XPath("//img[contains(@src,'http://automationpractice.com/modules/themeconfigurator/img/banner-img6.jpg')]");
         private By _bannerOnlyOnline = By.XPath("//img[contains(@src,'http://automationpractice.com/modules/themeconfigurator/img/banner-img7.jpg')]");
