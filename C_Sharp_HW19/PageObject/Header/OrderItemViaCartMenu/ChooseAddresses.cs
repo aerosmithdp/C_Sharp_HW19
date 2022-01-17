@@ -11,16 +11,22 @@ namespace C_Sharp_HW19.PageObjects
             _driver = driver;
         }
 
+        private readonly By _goBackSummary = By.XPath("//ul[@id='order_step']/li/a");
         private readonly By _chooseDeliveryAddress = By.XPath("//select[@id='id_address_delivery']");
         private readonly By _useBillingAsAddress = By.XPath("//input[@id='addressesAreEquals']");
         private readonly By _updateDeliveryAddress = By.XPath("//ul[@id='address_delivery']/li[9]/a/span");
         private readonly By _updateBillingAddress = By.XPath("//ul[@id='address_invoice']/li[9]/a/span");
         private readonly By _addNewAddress = By.XPath("//div[@id='center_column']/form/div/p/a/span");
-
-
         private readonly By _messageField = By.XPath("//input[@id='addressesAreEquals']");
         private readonly By _procedeToCheckout = By.XPath("//div[@id='center_column']/p[2]/a/span");
         private readonly By _continueShopping = By.XPath("//div[@id='center_column']/p[2]/a[2]");
+        
+
+        public Cart ReturnToSummary()
+        {
+            _driver.FindElement(_goBackSummary).Click();
+            return new Cart(_driver);
+        }
 
         public ChooseAddresses ChooseDeliveryAdress()
         {
@@ -71,10 +77,6 @@ namespace C_Sharp_HW19.PageObjects
             _driver.FindElement(_continueShopping).Click();
             return new HomePage(_driver);
         }
-
-
-
-
     }
 }
 

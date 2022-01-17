@@ -12,12 +12,20 @@ namespace C_Sharp_HW19.PageObjects
         }
 
         //Cart step2
+        private readonly By _goBackSummary = By.XPath("//ul[@id='order_step']/li/a");
         private readonly By _fieldEmail = By.XPath("//input[@id='email_create']");
         private readonly By _createAccountButton = By.XPath("//button[@id='SubmitCreate']/span");
         private readonly By _inputEmailField = By.XPath("//input[@id='email']");
         private readonly By _inputPasswordField = By.XPath("//input[@id='passwd']");
         private readonly By _forgotPassword = By.XPath("//a[contains(text(),'Forgot your password?')]");
         private readonly By _submitButton = By.XPath("//button[@id='SubmitLogin']/span");
+        
+
+        public Cart ReturnToSummary()
+        {
+            _driver.FindElement(_goBackSummary).Click();
+            return new Cart(_driver);
+        }
 
         public SignInViaCartMenu EmailInput()
         {
