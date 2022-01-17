@@ -7,12 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="PageObject\Header\WomenMenu\**" />
-    <EmbeddedResource Remove="PageObject\Header\WomenMenu\**" />
-    <None Remove="PageObject\Header\WomenMenu\**" />
     <None Remove="PageObject\Body\BunnerSlider\" />
     <None Remove="PageObject\Body\ProductList\" />
-    <None Remove="PageObject\HeaderFolder\PersonalAccountInnerMenu\" />
+    <None Remove="PageObject\Header\PersonalAccountInnerMenu\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -34,7 +31,6 @@
     <Folder Include="PageObject\Body\" />
 
     <Folder Include="PageObject\Body\ProductList\" />
-    <Folder Include="PageObject\HeaderFolder\PersonalAccountInnerMenu\" />
   </ItemGroup>
 
   <ItemGroup>

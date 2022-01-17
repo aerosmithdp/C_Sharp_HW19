@@ -2,12 +2,15 @@
 using System;
 
 
+//Sheremet
+
+
 namespace C_Sharp_HW19.PageObjects
 
 {
-    public class OrderHistory : Header
+    public class CreditSlips : Header
     {
-        public OrderHistory(IWebDriver driver)
+        public CreditSlips(IWebDriver driver)
         {
             _driver = driver;
         }

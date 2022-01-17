@@ -9,14 +9,7 @@ namespace C_Sharp_HW19
 {
     public class UnitTest1 : BaseTest
     {
-        [Fact]
-        public void test1()
-        {
-            IWebDriver driver = StartDriverOnPage("http://automationpractice.com/index.php");
-            Body homePage = new();
-            homePage.ClickQuickViewBlosePlus();
-
-        }
+        
         [Fact]
         public void TestBanner()
         {

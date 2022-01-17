@@ -1,13 +1,14 @@
 ﻿using OpenQA.Selenium;
 using System;
 
+//Sheremet
 
 namespace C_Sharp_HW19.PageObjects
 
 {
-    public class CreditSlips : Header
+    public class OrderHistory : Header
     {
-        public CreditSlips(IWebDriver driver)
+        public OrderHistory(IWebDriver driver)
         {
             _driver = driver;
         }

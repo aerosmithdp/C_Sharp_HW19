@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 
+//Sheremet
 
 namespace C_Sharp_HW19.PageObjects
 

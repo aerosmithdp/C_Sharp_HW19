@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 
+//Sheremet
 
 namespace C_Sharp_HW19.PageObjects
 
@@ -24,9 +25,10 @@ namespace C_Sharp_HW19.PageObjects
         private readonly By _otherField = By.XPath("//textarea[@id='other']");
         private readonly By _homePhoneField = By.XPath("//input[@id='phone']");
         private readonly By _mobilePhoneField = By.XPath("//input[@id='phone_mobile']");
-        private readonly By _additionalInfo = By.XPath("//input[@id='addinfo']");
-        private readonly By _submitButton = By.XPath("//button[@id='submitAccount']/span");
+        private readonly By _additionalInfo = By.XPath("//form[@id='add_address']/div[14]/textarea");
         private readonly By _alias = By.XPath("//input[@id='alias']");
+        private readonly By _submitButton = By.XPath("//button[@id='submitAccount']/span");
+        
 
         public ImproveAddresses ConfirmFirstName()
         {
@@ -108,6 +110,12 @@ namespace C_Sharp_HW19.PageObjects
         public ImproveAddresses Aliasield()
         {
             _driver.FindElement(_alias).SendKeys("Master");
+            return this;
+        }
+
+        public ImproveAddresses AdditionalInfoField()
+        {
+            _driver.FindElement(_additionalInfo).SendKeys("Master");
             return this;
         }
 
