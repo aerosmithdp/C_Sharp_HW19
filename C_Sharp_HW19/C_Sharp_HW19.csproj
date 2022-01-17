@@ -33,7 +33,6 @@
   <ItemGroup>
     <Folder Include="PageObject\Body\" />
 
-    <Folder Include="PageObject\Body\Homeslider\" />
     <Folder Include="PageObject\Body\ProductList\" />
     <Folder Include="PageObject\HeaderFolder\PersonalAccountInnerMenu\" />
   </ItemGroup>
