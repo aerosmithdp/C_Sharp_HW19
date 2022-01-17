@@ -4,7 +4,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
-// Наталья Никулина
+// Natali nikulina
 
 namespace C_Sharp_HW19.PageObjects
 {
@@ -47,8 +47,7 @@ namespace C_Sharp_HW19.PageObjects
         private By _plus = By.CssSelector(".icon-plus");
         private By _minus = By.CssSelector(".button-minus > span");
         private By _size = By.Id("group_1");
-        private By _addToWishlist = By.Id("wishlist_button");
-        
+        private By _addToWishlist = By.Id("wishlist_button");        
         //сторонние сети
         private By _twitter = By.CssSelector(".btn-twitter");
         private By _share = By.CssSelector(".btn-facebook");
@@ -232,53 +231,83 @@ namespace C_Sharp_HW19.PageObjects
             return this;
         }
 
-        public TwitterQuickView ClickQuickViewBlouseTwitter()
+        public Body ClickQuickViewMorelistBlouse()
         {
-            _driver.FindElement(_blouse).FindElement(_quickView).Click();
-            _driver.FindElement(_twitter).Click();
-            return new TwitterQuickView(_driver);
-        }
-
-        public ShareQuickView ClickQuickViewBlouseShare()
-        {
-            _driver.FindElement(_blouse).FindElement(_quickView).Click();
-            _driver.FindElement(_share).Click();
-            return new ShareQuickView(_driver);
-        }
-
-        public GoogleQuickView ClickQuickViewBlouseGoogle()
-        {
-            _driver.FindElement(_blouse).FindElement(_quickView).Click();
-            _driver.FindElement(_google).Click();
-            return new GoogleQuickView(_driver);
-        }
-
-        public PinterestQuickView ClickQuickViewBlousePinterest()
-        {
-            _driver.FindElement(_blouse).FindElement(_quickView).Click();
-            _driver.FindElement(_pinterest).Click();
-            return new PinterestQuickView(_driver);
-        }
-
-        public Body ClickButtonMorelistBlouse()
-        {
-            _driver.FindElement(_blouse).FindElement(_quickView);
-            _driver.FindElement(_more).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_blouse);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_more);
+            more.Click();
             return this;
+        }
+
+        public Body ClickQuickViewAddToWishlistBlouse()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_blouse);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToWishlist);
+            more.Click();
+            return this;
+        }
+
+        public AddToCart ClickQuickViewAddToCartBlouse()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_blouse);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToCart);
+            more.Click();
+            return new AddToCart(_driver);
         }
 
         public Body ClickButtonAddToWishlistBlouse()
         {
-            _driver.FindElement(_blouse).FindElement(_quickView);
+            _driver.FindElement(_blouse).Click();
             _driver.FindElement(_addToWishlist).Click();
             return this;
         }
 
-        public AddToCart ClickAddToCartBlouse()
+        public AddToCart ClickButtonAddToCartBlouse()
         {
-            _driver.FindElement(_blouse).FindElement(_quickView);
+            _driver.FindElement(_blouse).Click();
             _driver.FindElement(_addToCart).Click();
             return new AddToCart(_driver);
+        }
+
+        public TwitterQuickView ClickButtonTwitterBlouse()
+        {
+
+            _driver.FindElement(_blouse).Click();
+            _driver.FindElement(_twitter).Click();
+            return new TwitterQuickView(_driver);
+        }
+
+        public ShareQuickView ClickButtonShareBlouse()
+        {
+            _driver.FindElement(_blouse).Click();
+            _driver.FindElement(_share).Click();
+            return new ShareQuickView(_driver);
+        }
+
+        public GoogleQuickView ClickButtonGoogleBlouse()
+        {
+            _driver.FindElement(_blouse).Click();
+            _driver.FindElement(_google).Click();
+            return new GoogleQuickView(_driver);
+        }
+
+        public PinterestQuickView ClickButtonPinterestBlouse()
+        {
+            _driver.FindElement(_blouse).Click();
+            _driver.FindElement(_pinterest).Click();
+            return new PinterestQuickView(_driver);
         }
 
         public PrintedChiffonDress ClickPrintedChiffonDressSeeDescription()
@@ -341,51 +370,80 @@ namespace C_Sharp_HW19.PageObjects
             return this;
         }
 
-        public TwitterQuickView ClickQuickViewPrintedChiffonDressTwitter()
+        public Body ClickQuickViewMorelistPrintedChiffonDress()
         {
-            _driver.FindElement(_printedChiffonDress).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedChiffonDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_more);
+            more.Click();
+            return this;
+        }
+
+        public Body ClickQuickViewAddToWishlistPrintedChiffonDress()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedChiffonDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToWishlist);
+            more.Click();
+            return this;
+        }
+
+        public AddToCart ClickQuickViewAddToCartPrintedChiffonDress()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedChiffonDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToCart);
+            more.Click();
+            return new AddToCart(_driver);
+        }
+
+        public TwitterQuickView ClickButtonTwitterPrintedChiffonDressTwitter()
+        {
+            _driver.FindElement(_printedChiffonDress).Click();
             _driver.FindElement(_twitter).Click();
             return new TwitterQuickView(_driver);
         }
-
-        public ShareQuickView ClickQuickViewPrintedChiffonDressShare()
+        
+        public ShareQuickView ClickButtonSharePrintedChiffonDress()
         {
-            _driver.FindElement(_printedChiffonDress).FindElement(_quickView).Click();
+            _driver.FindElement(_printedChiffonDress).Click();
             _driver.FindElement(_share).Click();
             return new ShareQuickView(_driver);
         }
 
-        public GoogleQuickView ClickQuickViewPrintedChiffonDressGoogle()
+        public GoogleQuickView ClickButtonGooglePrintedChiffonDress()
         {
-            _driver.FindElement(_printedChiffonDress).FindElement(_quickView).Click();
+            _driver.FindElement(_printedChiffonDress).Click();
             _driver.FindElement(_google).Click();
             return new GoogleQuickView(_driver);
         }
 
-        public PinterestQuickView ClickQuickViewPrintedChiffonDressPinterest()
+        public PinterestQuickView ClickButtonPinterestPrintedChiffonDress()
         {
-            _driver.FindElement(_printedChiffonDress).FindElement(_quickView).Click();
+            _driver.FindElement(_printedChiffonDress).Click();
             _driver.FindElement(_pinterest).Click();
             return new PinterestQuickView(_driver);
         }
 
-        public Body ClickButtonMorelistPrintedChiffonDress()
-        {
-            _driver.FindElement(_printedChiffonDress).FindElement(_quickView);
-            _driver.FindElement(_more).Click();
-            return this;
-        }
-
         public Body ClickButtonAddToWishlistPrintedChiffonDress()
         {
-            _driver.FindElement(_printedChiffonDress).FindElement(_quickView);
+            _driver.FindElement(_printedChiffonDress).Click();
             _driver.FindElement(_addToWishlist).Click();
             return this;
         }
 
         public AddToCart ClickAddToCartPrintedChiffonDress()
         {
-            _driver.FindElement(_printedChiffonDress).FindElement(_quickView);
+            _driver.FindElement(_printedChiffonDress).Click();
             _driver.FindElement(_addToCart).Click();
             return new AddToCart(_driver);
         }
@@ -448,51 +506,80 @@ namespace C_Sharp_HW19.PageObjects
             return this;
         }
 
-        public TwitterQuickView ClickQuickViewPrintedDressTwitter()
+        public Body ClickQuickViewMorelistPrintedDress()
         {
-            _driver.FindElement(_printedDress).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_more);
+            more.Click();
+            return this;
+        }
+
+        public Body ClickQuickViewAddToWishlistPrintedDress()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToWishlist);
+            more.Click();
+            return this;
+        }
+
+        public AddToCart ClickQuickViewAddToCartPrintedDress()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToCart);
+            more.Click();
+            return new AddToCart(_driver);
+        }
+
+        public TwitterQuickView ClickButtonTwitterPrintedDress()
+        {
+            _driver.FindElement(_printedDress).Click();
             _driver.FindElement(_twitter).Click();
             return new TwitterQuickView(_driver);
         }
 
-        public ShareQuickView ClickQuickViewPrintedDressShare()
+        public ShareQuickView ClickButtonSharePrintedDress()
         {
-            _driver.FindElement(_printedDress).FindElement(_quickView).Click();
+            _driver.FindElement(_printedDress).Click();
             _driver.FindElement(_share).Click();
             return new ShareQuickView(_driver);
         }
 
-        public GoogleQuickView ClickQuickViewPrintedDressGoogle()
+        public GoogleQuickView ClickButtonGooglePrintedDress()
         {
-            _driver.FindElement(_printedDress).FindElement(_quickView).Click();
+            _driver.FindElement(_printedDress).Click();
             _driver.FindElement(_google).Click();
             return new GoogleQuickView(_driver);
         }
 
-        public PinterestQuickView ClickQuickViewPrintedDressPinterest()
+        public PinterestQuickView ClickButtonPinterestPrintedDress()
         {
-            _driver.FindElement(_printedDress).FindElement(_quickView).Click();
+            _driver.FindElement(_printedDress).Click();
             _driver.FindElement(_pinterest).Click();
             return new PinterestQuickView(_driver);
         }
 
-        public Body ClickButtonMorelistPrintedDress()
-        {
-            _driver.FindElement(_printedDress).FindElement(_quickView);
-            _driver.FindElement(_more).Click();
-            return this;
-        }
-
         public Body ClickButtonAddToWishlistPrintedDress()
         {
-            _driver.FindElement(_printedDress).FindElement(_quickView);
+            _driver.FindElement(_printedDress).Click();
             _driver.FindElement(_addToWishlist).Click();
             return this;
         }
 
         public AddToCart ClickAddToCartPrintedDress()
         {
-            _driver.FindElement(_printedDress).FindElement(_quickView);
+            _driver.FindElement(_printedDress).Click();
             _driver.FindElement(_addToCart).Click();
             return new AddToCart(_driver);
         }
@@ -557,51 +644,80 @@ namespace C_Sharp_HW19.PageObjects
             return this;
         }
 
-        public TwitterQuickView ClickQuickViewPrintedDress2Twitter()
+        public Body ClickQuickViewMorelistPrintedDress2()
         {
-            _driver.FindElement(_printedDress2).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedDress2);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_more);
+            more.Click();
+            return this;
+        }
+
+        public Body ClickQuickViewAddToWishlistPrintedDress2()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedDress2);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToWishlist);
+            more.Click();
+            return this;
+        }
+
+        public AddToCart ClickQuickViewAddToCartPrintedDress2()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedDress2);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToCart);
+            more.Click();
+            return new AddToCart(_driver);
+        }
+
+        public TwitterQuickView ClickButtonTwitterPrintedDress2()
+        {
+            _driver.FindElement(_printedDress2).Click();
             _driver.FindElement(_twitter).Click();
             return new TwitterQuickView(_driver);
         }
 
-        public ShareQuickView ClickQuickViewPrintedDress2Share()
+        public ShareQuickView ClickButtonSharePrintedDress2()
         {
-            _driver.FindElement(_printedDress2).FindElement(_quickView).Click();
+            _driver.FindElement(_printedDress2).Click();
             _driver.FindElement(_share).Click();
             return new ShareQuickView(_driver);
         }
 
-        public GoogleQuickView ClickQuickViewPrintedDress2Google()
+        public GoogleQuickView ClickButtonGooglePrintedDress2()
         {
-            _driver.FindElement(_printedDress2).FindElement(_quickView).Click();
+            _driver.FindElement(_printedDress2).Click();
             _driver.FindElement(_google).Click();
             return new GoogleQuickView(_driver);
         }
 
-        public PinterestQuickView ClickQuickViewPrintedDress2Pinterest()
+        public PinterestQuickView ClickButtonPinterestPrintedDress2()
         {
-            _driver.FindElement(_printedDress2).FindElement(_quickView).Click();
+            _driver.FindElement(_printedDress2).Click();
             _driver.FindElement(_pinterest).Click();
             return new PinterestQuickView(_driver);
         }
 
-        public Body ClickButtonMorelistPrintedDress2()
-        {
-            _driver.FindElement(_printedDress2).FindElement(_quickView);
-            _driver.FindElement(_more).Click();
-            return this;
-        }
-
         public Body ClickButtonAddToWishlistPrintedDress2()
         {
-            _driver.FindElement(_printedDress2).FindElement(_quickView);
+            _driver.FindElement(_printedDress2).Click();
             _driver.FindElement(_addToWishlist).Click();
             return this;
         }
 
         public AddToCart ClickAddToCartPrintedDress2()
         {
-            _driver.FindElement(_printedDress2).FindElement(_quickView);
+            _driver.FindElement(_printedDress2).Click();
             _driver.FindElement(_addToCart).Click();
             return new AddToCart(_driver);
         }
@@ -670,51 +786,80 @@ namespace C_Sharp_HW19.PageObjects
             return this;
         }
 
-        public TwitterQuickView ClickQuickViewPrintedSummerDressTwitter()
+        public Body ClickQuickViewMorelistSummerDress()
         {
-            _driver.FindElement(_printedSummerDress).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedSummerDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_more);
+            more.Click();
+            return this;
+        }
+
+        public Body ClickQuickViewAddToWishlistSummerDress()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedSummerDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToWishlist);
+            more.Click();
+            return this;
+        }
+
+        public AddToCart ClickQuickViewAddToCartSummerDress()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedSummerDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToCart);
+            more.Click();
+            return new AddToCart(_driver);
+        }
+
+        public TwitterQuickView ClickButtonTwitterPrintedSummerDress()
+        {
+            _driver.FindElement(_printedSummerDress).Click();
             _driver.FindElement(_twitter).Click();
             return new TwitterQuickView(_driver);
         }
 
-        public ShareQuickView ClickQuickViewPrintedSummerDressShare()
+        public ShareQuickView ClickButtonSharePrintedSummerDress()
         {
-            _driver.FindElement(_printedSummerDress).FindElement(_quickView).Click();
+            _driver.FindElement(_printedSummerDress).Click();
             _driver.FindElement(_share).Click();
             return new ShareQuickView(_driver);
         }
 
-        public GoogleQuickView ClickQuickViewPrintedSummerDressGoogle()
+        public GoogleQuickView ClickButtonGooglePrintedSummerDress()
         {
-            _driver.FindElement(_printedSummerDress).FindElement(_quickView).Click();
+            _driver.FindElement(_printedSummerDress).Click();
             _driver.FindElement(_google).Click();
             return new GoogleQuickView(_driver);
         }
 
-        public PinterestQuickView ClickQuickViewPrintedSummerDressPinterest()
+        public PinterestQuickView ClickButtonPinterestPrintedSummerDress()
         {
-            _driver.FindElement(_printedSummerDress).FindElement(_quickView).Click();
+            _driver.FindElement(_printedSummerDress).Click();
             _driver.FindElement(_pinterest).Click();
             return new PinterestQuickView(_driver);
         }
 
-        public Body ClickButtonMorelistPrintedSummerDress()
-        {
-            _driver.FindElement(_printedSummerDress).FindElement(_quickView);
-            _driver.FindElement(_more).Click();
-            return this;
-        }
-
         public Body ClickButtonAddToWishlistPrintedSummerDress()
         {
-            _driver.FindElement(_printedSummerDress).FindElement(_quickView);
+            _driver.FindElement(_printedSummerDress).Click();
             _driver.FindElement(_addToWishlist).Click();
             return this;
         }
 
         public AddToCart ClickAddToCartPrintedSummerDress()
         {
-            _driver.FindElement(_printedSummerDress).FindElement(_quickView);
+            _driver.FindElement(_printedSummerDress).Click();
             _driver.FindElement(_addToCart).Click();
             return new AddToCart(_driver);
         }
@@ -779,51 +924,80 @@ namespace C_Sharp_HW19.PageObjects
             return this;
         }
 
-        public TwitterQuickView ClickQuickViewPrintedSummerDress2Twitter()
+        public Body ClickQuickViewMorelistSummerDress2()
         {
-            _driver.FindElement(_printedSummerDress2).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedSummerDress2);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_more);
+            more.Click();
+            return this;
+        }
+
+        public Body ClickQuickViewAddToWishlistSummerDress2()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedSummerDress2);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToWishlist);
+            more.Click();
+            return this;
+        }
+
+        public AddToCart ClickQuickViewAddToCartSummerDress2()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedSummerDress2);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToCart);
+            more.Click();
+            return new AddToCart(_driver);
+        }
+
+        public TwitterQuickView ClickButtonTwitterPrintedSummerDress2()
+        {
+            _driver.FindElement(_printedSummerDress2).Click();
             _driver.FindElement(_twitter).Click();
             return new TwitterQuickView(_driver);
         }
 
-        public ShareQuickView ClickQuickViewPrintedSummerDress2Share()
+        public ShareQuickView ClickButtonSharePrintedSummerDress2()
         {
-            _driver.FindElement(_printedSummerDress2).FindElement(_quickView).Click();
+            _driver.FindElement(_printedSummerDress2).Click();
             _driver.FindElement(_share).Click();
             return new ShareQuickView(_driver);
         }
 
-        public GoogleQuickView ClickQuickViewPrintedSummerDress2Google()
+        public GoogleQuickView ClickButtonGooglePrintedSummerDress2()
         {
-            _driver.FindElement(_printedSummerDress2).FindElement(_quickView).Click();
+            _driver.FindElement(_printedSummerDress2).Click();
             _driver.FindElement(_google).Click();
             return new GoogleQuickView(_driver);
         }
 
-        public PinterestQuickView ClickQuickViewPrintedSummerDress2Pinterest()
+        public PinterestQuickView ClickButtonPinterestPrintedSummerDress2()
         {
-            _driver.FindElement(_printedSummerDress2).FindElement(_quickView).Click();
+            _driver.FindElement(_printedSummerDress2).Click();
             _driver.FindElement(_pinterest).Click();
             return new PinterestQuickView(_driver);
         }
 
-        public Body ClickButtonMorelistPrintedSummerDress2()
-        {
-            _driver.FindElement(_printedSummerDress2).FindElement(_quickView);
-            _driver.FindElement(_more).Click();
-            return this;
-        }
-
         public Body ClickButtonAddToWishlistPrintedSummerDress2()
         {
-            _driver.FindElement(_printedSummerDress2).FindElement(_quickView);
+            _driver.FindElement(_printedSummerDress2).Click();
             _driver.FindElement(_addToWishlist).Click();
             return this;
         }
 
         public AddToCart ClickAddToCartPrintedSummerDress2()
         {
-            _driver.FindElement(_printedSummerDress2).FindElement(_quickView);
+            _driver.FindElement(_printedSummerDress2).Click();
             _driver.FindElement(_addToCart).Click();
             return new AddToCart(_driver);
         }
@@ -894,51 +1068,80 @@ namespace C_Sharp_HW19.PageObjects
             return this;
         }
 
-        public TwitterQuickView ClickQuickViewShortSleeveTwitter()
+        public Body ClickQuickViewMorelistShortSleeve()
         {
-            _driver.FindElement(_fadedShortSleeve).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_fadedShortSleeve);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_more);
+            more.Click();
+            return this;
+        }
+
+        public Body ClickQuickViewAddToWishlistShortSleeve()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_fadedShortSleeve);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToWishlist);
+            more.Click();
+            return this;
+        }
+
+        public AddToCart ClickQuickViewAddToCartShortSleeve()
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_fadedShortSleeve);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement more = _driver.FindElement(_addToCart);
+            more.Click();
+            return new AddToCart(_driver);
+        }
+
+        public TwitterQuickView ClickButtonTwitterShortSleeve()
+        {
+            _driver.FindElement(_fadedShortSleeve).Click();
             _driver.FindElement(_twitter).Click();
             return new TwitterQuickView(_driver);
         }
 
-        public ShareQuickView ClickQuickViewShortSleeveShare()
+        public ShareQuickView ClickButtonShareShortSleeve()
         {
-            _driver.FindElement(_fadedShortSleeve).FindElement(_quickView).Click();
+            _driver.FindElement(_fadedShortSleeve).Click();
             _driver.FindElement(_share).Click();
             return new ShareQuickView(_driver);
         }
 
-        public GoogleQuickView ClickQuickViewShortSleeveGoogle()
+        public GoogleQuickView ClickButtonGoogleShortSleeve()
         {
-            _driver.FindElement(_fadedShortSleeve).FindElement(_quickView).Click();
+            _driver.FindElement(_fadedShortSleeve).Click();
             _driver.FindElement(_google).Click();
             return new GoogleQuickView(_driver);
         }
 
-        public PinterestQuickView ClickQuickViewShortSleevePinterest()
+        public PinterestQuickView ClickButtonPinterestShortSleeve()
         {
-            _driver.FindElement(_fadedShortSleeve).FindElement(_quickView).Click();
+            _driver.FindElement(_fadedShortSleeve).Click();
             _driver.FindElement(_pinterest).Click();
             return new PinterestQuickView(_driver);
         }
 
-        public Body ClickButtonMorelistShortSleeve()
-        {
-            _driver.FindElement(_fadedShortSleeve).FindElement(_quickView);
-            _driver.FindElement(_more).Click();
-            return this;
-        }
-
         public Body ClickButtonAddToWishlistShortSleeve()
         {
-            _driver.FindElement(_fadedShortSleeve).FindElement(_quickView);
+            _driver.FindElement(_fadedShortSleeve).Click();
             _driver.FindElement(_addToWishlist).Click();
             return this;
         }
 
         public AddToCart ClickAddToCartShortSleeve()
         {
-            _driver.FindElement(_fadedShortSleeve).FindElement(_quickView);
+            _driver.FindElement(_fadedShortSleeve).Click();
             _driver.FindElement(_addToCart).Click();
             return new AddToCart(_driver);
         }
