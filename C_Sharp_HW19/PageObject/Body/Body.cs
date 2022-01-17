@@ -47,12 +47,21 @@ namespace C_Sharp_HW19.PageObjects
         private By _plus = By.CssSelector(".icon-plus");
         private By _minus = By.CssSelector(".button-minus > span");
         private By _size = By.Id("group_1");
-        private By _addToWishlist = By.Id("wishlist_button");        
+        private By _addToWishlist = By.Id("wishlist_button");
+        
         //сторонние сети
         private By _twitter = By.CssSelector(".btn-twitter");
         private By _share = By.CssSelector(".btn-facebook");
         private By _google = By.CssSelector(".btn-google-plus");
         private By _pinterest = By.CssSelector(".btn-pinterest");
+        //переход в Selenium
+        private By _selenium = By.XPath("//li[2]/div/p/a");
+
+        public Selenium ClickSelenium()
+        {
+            _driver.FindElement(_selenium).Click();
+            return new Selenium(_driver);
+        }
 
         public PrestaShopPage ClickBannerSale()
         {
@@ -193,10 +202,16 @@ namespace C_Sharp_HW19.PageObjects
         }
 
         public Body ClickQuickViewBlouseQuantity()
-        {        
-            _driver.FindElement(_blouse).FindElement(_quickView).Click();
-            _driver.FindElement(_plus).Click();
-            _driver.FindElement(_minus).Click();
+        {
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_blouse);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement plus = _driver.FindElement(_plus);
+            plus.Click();
+            IWebElement minus = _driver.FindElement(_minus);
+            minus.Click();
             IWebElement quantity = _driver.FindElement(_quantity);
             quantity.SendKeys("5");
             quantity.SendKeys(Keys.Enter);
@@ -205,7 +220,11 @@ namespace C_Sharp_HW19.PageObjects
 
         public Body ClickQuickViewBlouseColor()
         {
-            _driver.FindElement(_blouse).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_blouse);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
             IWebElement color1 = _driver.FindElement(By.CssSelector("#color_8"));
             color1.Click();
             IWebElement color2 = _driver.FindElement(By.CssSelector("#color_11"));
@@ -293,18 +312,28 @@ namespace C_Sharp_HW19.PageObjects
 
         public Body ClickQuickViewPrintedChiffonDressQuantity()
         {
-            _driver.FindElement(_printedChiffonDress).FindElement(_quickView).Click();
-            _driver.FindElement(_plus).Click();
-            _driver.FindElement(_minus).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedChiffonDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement plus = _driver.FindElement(_plus);
+            plus.Click();
+            IWebElement minus = _driver.FindElement(_minus);
+            minus.Click();
             IWebElement quantity = _driver.FindElement(_quantity);
-            quantity.SendKeys("50");
+            quantity.SendKeys("5");
             quantity.SendKeys(Keys.Enter);
             return this;
         }
 
         public Body ClickQuickViewPrintedChiffonDressColor()
         {
-            _driver.FindElement(_printedChiffonDress).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedChiffonDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
             IWebElement color1 = _driver.FindElement(By.Id("color_15"));
             color1.Click();
             IWebElement color2 = _driver.FindElement(By.Id("color_16"));
@@ -392,18 +421,28 @@ namespace C_Sharp_HW19.PageObjects
 
         public Body ClickQuickViewPrintedDressQuantity()
         {
-            _driver.FindElement(_printedDress).FindElement(_quickView).Click();
-            _driver.FindElement(_plus).Click();
-            _driver.FindElement(_minus).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement plus = _driver.FindElement(_plus);
+            plus.Click();
+            IWebElement minus = _driver.FindElement(_minus);
+            minus.Click();
             IWebElement quantity = _driver.FindElement(_quantity);
-            quantity.SendKeys("100");
+            quantity.SendKeys("5");
             quantity.SendKeys(Keys.Enter);
             return this;
         }
 
         public Body ClickQuickViewPrintedDressColor()
         {
-            _driver.FindElement(_printedDress).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
             IWebElement color = _driver.FindElement(By.Id("color_13"));
             color.Click();            
             return this;
@@ -489,18 +528,28 @@ namespace C_Sharp_HW19.PageObjects
 
         public Body ClickQuickViewPrintedDress2Quantity()
         {
-            _driver.FindElement(_printedDress2).FindElement(_quickView).Click();
-            _driver.FindElement(_plus).Click();
-            _driver.FindElement(_minus).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedDress2);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement plus = _driver.FindElement(_plus);
+            plus.Click();
+            IWebElement minus = _driver.FindElement(_minus);
+            minus.Click();
             IWebElement quantity = _driver.FindElement(_quantity);
-            quantity.SendKeys("100");
+            quantity.SendKeys("5");
             quantity.SendKeys(Keys.Enter);
             return this;
         }
 
         public Body ClickQuickViewPrintedDress2Color()
         {
-            _driver.FindElement(_printedDress2).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedDress2);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
             IWebElement color1 = _driver.FindElement(By.Id("color_7"));
             color1.Click();
             IWebElement color2 = _driver.FindElement(By.Id("color_24"));
@@ -588,18 +637,28 @@ namespace C_Sharp_HW19.PageObjects
 
         public Body ClickQuickViewPrintedSummerDressQuantity()
         {
-            _driver.FindElement(_printedSummerDress).FindElement(_quickView).Click();
-            _driver.FindElement(_plus).Click();
-            _driver.FindElement(_minus).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedSummerDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement plus = _driver.FindElement(_plus);
+            plus.Click();
+            IWebElement minus = _driver.FindElement(_minus);
+            minus.Click();
             IWebElement quantity = _driver.FindElement(_quantity);
-            quantity.SendKeys("70");
+            quantity.SendKeys("5");
             quantity.SendKeys(Keys.Enter);
             return this;
         }
 
         public Body ClickQuickViewPrintedSummerDressColor()
         {
-            _driver.FindElement(_printedSummerDress).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedSummerDress);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
             IWebElement color1 = _driver.FindElement(By.Id("color_11"));
             color1.Click();
             IWebElement color2 = _driver.FindElement(By.Id("color_13"));
@@ -691,18 +750,28 @@ namespace C_Sharp_HW19.PageObjects
 
         public Body ClickQuickViewPrintedSummerDress2Quantity()
         {
-            _driver.FindElement(_printedSummerDress2).FindElement(_quickView).Click();
-            _driver.FindElement(_plus).Click();
-            _driver.FindElement(_minus).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedSummerDress2);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement plus = _driver.FindElement(_plus);
+            plus.Click();
+            IWebElement minus = _driver.FindElement(_minus);
+            minus.Click();
             IWebElement quantity = _driver.FindElement(_quantity);
-            quantity.SendKeys("70");
+            quantity.SendKeys("5");
             quantity.SendKeys(Keys.Enter);
             return this;
         }
 
         public Body ClickQuickViewPrintedSummerDress2Color()
         {
-            _driver.FindElement(_printedSummerDress2).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_printedSummerDress2);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
             IWebElement color1 = _driver.FindElement(By.Id("color_8"));
             color1.Click();
             IWebElement color2 = _driver.FindElement(By.Id("color_16"));
@@ -796,18 +865,28 @@ namespace C_Sharp_HW19.PageObjects
 
         public Body ClickQuickViewShortSleeveQuantity()
         {
-            _driver.FindElement(_fadedShortSleeve).FindElement(_quickView).Click();
-            _driver.FindElement(_plus).Click();
-            _driver.FindElement(_minus).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_fadedShortSleeve);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
+            IWebElement plus = _driver.FindElement(_plus);
+            plus.Click();
+            IWebElement minus = _driver.FindElement(_minus);
+            minus.Click();
             IWebElement quantity = _driver.FindElement(_quantity);
-            quantity.SendKeys("50");
+            quantity.SendKeys("5");
             quantity.SendKeys(Keys.Enter);
             return this;
         }
 
         public Body ClickQuickViewShortSleeveColor()
         {
-            _driver.FindElement(_fadedShortSleeve).FindElement(_quickView).Click();
+            Actions actions = new Actions(_driver);
+            IWebElement element = _driver.FindElement(_fadedShortSleeve);
+            actions.MoveToElement(element).Perform();
+            IWebElement quickView = _driver.FindElement(_quickView);
+            quickView.Click();
             IWebElement color1 = _driver.FindElement(By.Id("color_13"));
             color1.Click();
             IWebElement color2 = _driver.FindElement(By.Id("color_14"));
