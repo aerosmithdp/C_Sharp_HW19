@@ -20,16 +20,7 @@ namespace C_Sharp_HW19.PageObjects
         private readonly By _procedeToCheckout = By.XPath("//div[@id='center_column']/p[2]/a/span");
         private readonly By _continueShopping = By.XPath("//div[@id='center_column']/p[2]/a[2]");
 
-        //Cart step2
-        private readonly By _fieldEmail = By.XPath("//input[@id='email_create']");
-        private readonly By _createAccountButton = By.XPath("//button[@id='SubmitCreate']/span");
-        private readonly By _inputEmailField = By.XPath("//input[@id='email']");
-        private readonly By _inputPasswordField = By.XPath("//input[@id='passwd']");
-        private readonly By _forgotPassword = By.XPath("//a[contains(text(),'Forgot your password?')]");
-        private readonly By _submitButton = By.XPath("//button[@id='SubmitLogin']/span");
-
-
-
+        
         public AddToCart ClickImageDress()
         {
             _driver.FindElement(_clickOnImage).Click();
@@ -60,10 +51,10 @@ namespace C_Sharp_HW19.PageObjects
             return this;
         }
 
-        public Cart KeepOrdering()
+        public SignInViaCartMenu KeepOrdering()
         {
             _driver.FindElement(_procedeToCheckout).Click();
-            return this;
+            return new SignInViaCartMenu(_driver);
         }
 
         public HomePage ReturnToMainMenu()
@@ -71,46 +62,6 @@ namespace C_Sharp_HW19.PageObjects
             _driver.FindElement(_continueShopping).Click();
             return new HomePage(_driver);
         }
-
-
-
-        public Cart EmailInput()
-        {
-            _driver.FindElement(_fieldEmail).SendKeys("qwerty1224@mail.ru");
-            return this;
-        }
-
-        public AccountCreation CreateButtonClick()
-        {
-            _driver.FindElement(_createAccountButton).Click();
-            return new AccountCreation(_driver);
-        }
-
-        public Cart AlreadyRegisteredEmailInput()
-        {
-            _driver.FindElement(_inputEmailField).SendKeys("qwerty1223@mail.ru");
-            return this;
-        }
-
-        public Cart PasswordInput()
-        {
-            _driver.FindElement(_inputPasswordField).SendKeys("123456");
-            return this;
-        }
-
-        public ForgotPassword ForgotPasswordMenu()
-        {
-            _driver.FindElement(_forgotPassword).Click();
-            return new ForgotPassword(_driver);
-        }
-
-        public Cart EnterAccount()
-        {
-            _driver.FindElement(_submitButton).Click();
-            return this;
-        }
-
-
 
     }
 }
